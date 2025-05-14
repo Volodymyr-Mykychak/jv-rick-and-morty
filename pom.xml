@@ -148,12 +148,14 @@
                             <includes>
                                 <include>src/main/java/**/*.java</include>
                             </includes>
-                            <excludes>**/generated-sources/**</excludes>
+                            <excludes>
+                                <exclude>**/generated-sources/**</exclude>
+                            </excludes>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
