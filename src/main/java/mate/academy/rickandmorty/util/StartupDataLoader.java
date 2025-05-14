@@ -30,6 +30,7 @@ public class StartupDataLoader {
         String url = "https://rickandmortyapi.com/api/character";
         List<ExternalCharacterDto> allCharacters = new ArrayList<>();
         HttpClient client = HttpClient.newHttpClient();
+        System.out.println("test1");
         ObjectMapper objectMapper = new ObjectMapper();
         while (url != null) {
             try {
@@ -47,5 +48,6 @@ public class StartupDataLoader {
             }
         }
         characterRepository.saveAll(characterMapper.toEntityList(allCharacters));
+        System.out.println("test2");
     }
 }
